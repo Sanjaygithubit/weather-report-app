@@ -2,54 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Global reset & body background */
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-}
-
-html,
-body,
-#root {
-  height: 100%;
-}
-
-body {
-  margin: 0;
-}
-
-/* Dark background by default */
-body {
-  @apply bg-slate-950 text-slate-100;
-  background: radial-gradient(circle at top left, #020617, #020617 30%, #020617);
-}
-
-/* Light background when html has class 'light' (we'll use dark mode via 'dark' class) */
-html.light body {
-  background: radial-gradient(circle at top left, #e5e7eb, #ffffff 40%, #e5e7eb);
-}
-
-/* For accessible hidden labels */
-.visually-hidden {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  padding: 0;
-  margin: -1px;
-  overflow: hidden;
-  clip: rect(0, 0, 0, 0);
-  border: 0;
-}
-
-/* Custom scrollbars for forecast (optional) */
-.forecast-scroll::-webkit-scrollbar {
+/* custom scrollbar for forecast scroll */
+.scrollbar-thin::-webkit-scrollbar {
   height: 6px;
 }
-.forecast-scroll::-webkit-scrollbar-track {
+.scrollbar-thin::-webkit-scrollbar-track {
   background: transparent;
 }
-.forecast-scroll::-webkit-scrollbar-thumb {
+.scrollbar-thin::-webkit-scrollbar-thumb {
   background: #4b5563;
   border-radius: 999px;
 }
