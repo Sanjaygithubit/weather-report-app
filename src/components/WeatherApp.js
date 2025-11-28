@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
 
-const WeatherApp = ({ theme, onToggleTheme }) => {
+const WeatherApp =() => {
   const [city, setCity] = useState("");
   const [weather, setWeather] = useState(null);
   const [forecast, setForecast] = useState([]);
@@ -118,15 +118,7 @@ const WeatherApp = ({ theme, onToggleTheme }) => {
             SANJI Weather
           </h1>
 
-          <button
-            type="button"
-            onClick={onToggleTheme}
-            className="inline-flex items-center gap-2 rounded-full border border-slate-500/70 bg-slate-900/80 px-3 py-1 text-xs font-semibold uppercase tracking-[0.15em] text-slate-100 shadow-lg shadow-slate-950/70 transition hover:-translate-y-0.5 hover:border-sky-400 hover:bg-slate-900 dark:bg-slate-900 dark:text-slate-100 dark:border-slate-500/70 dark:hover:border-sky-400 dark:hover:bg-slate-900
-                       bg-white/90 text-slate-900 dark:bg-slate-900"
-          >
-            <span>{theme === "dark" ? "☀️" : "🌙"}</span>
-            {theme === "dark" ? "Light Mode" : "Dark Mode"}
-          </button>
+          
         </div>
         <p className="text-sm text-slate-400 dark:text-slate-400">
           Search real-time weather & 5-day forecast for any city 🌍

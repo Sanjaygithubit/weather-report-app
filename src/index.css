@@ -26,10 +26,6 @@ body {
 }
 
 /* Light background when html has class 'light' */
-html.light body {
-  background: radial-gradient(circle at top left, #e5e7eb, #ffffff 40%, #e5e7eb);
-  color: #0f172a;
-}
 
 /* Hidden label */
 .visually-hidden {
