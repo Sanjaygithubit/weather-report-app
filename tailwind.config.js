@@ -3,7 +3,7 @@ module.exports = {
   content: [
     "./src/**/*.{js,jsx,ts,tsx}",
   ],
-  darkMode: "false",
+  darkMode: "class", // we will toggle 'dark' class on html
   theme: {
     extend: {
       boxShadow: {

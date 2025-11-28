@@ -21,13 +21,16 @@ body {
 
 /* Dark background by default */
 body {
+  @apply bg-slate-950 text-slate-100;
   background: radial-gradient(circle at top left, #020617, #020617 30%, #020617);
-  color: #e5e7eb;
 }
 
-/* Light background when html has class 'light' */
+/* Light background when html has class 'light' (we'll use dark mode via 'dark' class) */
+html.light body {
+  background: radial-gradient(circle at top left, #e5e7eb, #ffffff 40%, #e5e7eb);
+}
 
-/* Hidden label */
+/* For accessible hidden labels */
 .visually-hidden {
   position: absolute;
   width: 1px;
@@ -39,7 +42,7 @@ body {
   border: 0;
 }
 
-/* Scrollbar for forecast */
+/* Custom scrollbars for forecast (optional) */
 .forecast-scroll::-webkit-scrollbar {
   height: 6px;
 }
