@@ -1,13 +1,56 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Global reset & body background */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+html,
+body,
+#root {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+}
+
+/* Dark background by default */
+body {
+  background: radial-gradient(circle at top left, #020617, #020617 30%, #020617);
+  color: #e5e7eb;
+}
+
+/* Light background when html has class 'light' */
+html.light body {
+  background: radial-gradient(circle at top left, #e5e7eb, #ffffff 40%, #e5e7eb);
+  color: #0f172a;
+}
+
+/* Hidden label */
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+/* Scrollbar for forecast */
+.forecast-scroll::-webkit-scrollbar {
+  height: 6px;
+}
+.forecast-scroll::-webkit-scrollbar-track {
+  background: transparent;
+}
+.forecast-scroll::-webkit-scrollbar-thumb {
+  background: #4b5563;
+  border-radius: 999px;
 }
